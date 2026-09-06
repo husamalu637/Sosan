@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدى الطفولة | مغامرات سوسان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #00d2ff; --accent: #ff9800; --bg: #0b0f19; --card: #161e2e; }
+        * { user-select: none; box-sizing: border-box; }
+        body { background-color: var(--bg); color: white; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; position: relative; }
+        header { width: 100%; background: linear-gradient(135deg, #00d2ff, #3a7bd5); padding: 30px 0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        
+        .banner-top, .banner-bottom { width: 100%; text-align: center; background: #0a0e15; padding: 20px 0; margin: 0 auto; display: flex; justify-content: center; align-items: center; border-radius: 12px; overflow-x: auto; }
+        .banner-top { max-width: 900px; margin-top: 20px; margin-bottom: 10px; }
+        .banner-bottom { max-width: 900px; margin-top: 30px; margin-bottom: 20px; }
+        
+        .main-container { max-width: 900px; width: 95%; margin: 0 auto; text-align: center; }
+
+        .video-wrapper-outer { position: relative; z-index: 1; margin-top: 20px; }
+        .video-display-area { background: #000; border-radius: 20px; overflow: hidden; border: 3px solid var(--primary); box-shadow: 0 0 30px rgba(0, 210, 255, 0.2); margin-bottom: 30px; display: none; position: relative; }
+        .responsive-iframe { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+        .responsive-iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; overflow: hidden; pointer-events: auto; }
+        
+        .episodes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 15px; background: var(--card); padding: 25px; border-radius: 20px; }
+        .ep-btn { background: #252f44; color: white; border: 2px solid transparent; padding: 15px 0; border-radius: 12px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; font-family: 'Cairo', sans-serif; }
+        .ep-btn:hover { background: var(--primary); transform: scale(1.1); border-color: white; color: #000; }
+        .ep-btn.active { background: var(--accent); color: black; box-shadow: 0 0 15px var(--accent); }
+
+        .info-text { margin-top: 20px; color: var(--primary); }
+        footer { margin-top: 50px; padding: 20px; opacity: 0.4; text-align: center; }
+        @media (max-width: 600px) { .episodes-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 10px; padding: 15px; } .ep-btn { padding: 12px 0; font-size: 1.1rem; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎬 مسلسل مغامرات سوسان</h1>
+    <p>اختر رقم الحلقة وابدأ المشاهدة فوراً</p>
+</header>
+
+<!-- إعلان البنر العلوي -->
+<div class="banner-top">
+    <script> atOptions = { 'key' : 'b8ba5b25ff25e41ea44c2df3a1b05378', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script>
+    <script src="https://www.highperformanceformat.com/b8ba5b25ff25e41ea44c2df3a1b05378/invoke.js"></script>
+</div>
+
+<div class="main-container">
+    <div class="video-wrapper-outer">
+        <div id="videoPlayer" class="video-display-area">
+            <div class="responsive-iframe"><iframe id="mainIframe" src="" allowfullscreen allow="autoplay; encrypted-media" scrolling="no" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div>
+            <div id="episodeTitle" style="padding: 10px; background: var(--card); font-weight: bold;"></div>
+        </div>
+    </div>
+
+    <h2>اضغط على رقم الحلقة للمشاهدة:</h2>
+    <div class="episodes-grid" id="buttonsGrid"></div>
+    <p class="info-text">جميع حلقات مغامرات سوسان المتاحة تعمل بكفاءة عالية</p>
+</div>
+
+<!-- إعلان البنر السفلي -->
+<div class="banner-bottom">
+    <script> atOptions = { 'key' : 'b8ba5b25ff25e41ea44c2df3a1b05378', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script>
+    <script src="https://www.highperformanceformat.com/b8ba5b25ff25e41ea44c2df3a1b05378/invoke.js"></script>
+</div>
+
+<footer>جميع الحقوق محفوظة - صدى الطفولة &copy; 2026</footer>
+
+<script>
+    const popupAdLink = "https://www.profitablecpmratenetwork.com/e41dj2h87?key=bef514b5ca3fa945e7a3b60e4a9ef21a";
+
+    // روابط حلقات مغامرات سوسان مرتبة بدقة حسب الطلب
+    const episodesData = [
+        { num: 1, url: "https://meyon.com.ye/videos/embed/876bd954-7239-4e41-b40b-035a8e307989" },
+        { num: 2, url: "https://meyon.com.ye/videos/embed/ba823c13-c05f-4ee4-88fe-ba64070f6776" },
+        { num: 3, url: "https://meyon.com.ye/videos/embed/f5ccc4f6-7111-4622-9738-0f416732c15d" },
+        { num: 4, url: "https://meyon.com.ye/videos/embed/99bb1f85-e8a7-43b7-86ad-51df29a41806" },
+        { num: 5, url: "https://meyon.com.ye/videos/embed/387e1a1c-fb71-4be9-a8f6-6e999296801b" },
+        { num: 6, url: "https://meyon.com.ye/videos/embed/1e27cd4f-8b6a-4dc3-b27d-82f18987e7bd" },
+        { num: 7, url: "https://meyon.com.ye/videos/embed/12a5746b-250e-474b-bf13-b715847d931e" },
+        { num: 8, url: "https://meyon.com.ye/videos/embed/fff26e58-a7cb-49f6-bf10-d2f9df98112f" },
+        { num: 9, url: "https://meyon.com.ye/videos/embed/21553b81-9b74-404f-bca1-bc2bf6bff8b8" },
+        { num: 10, url: "https://meyon.com.ye/videos/embed/b91ca0a9-a552-4535-88b4-ad5c2e4adb0d" },
+        { num: 11, url: "https://meyon.com.ye/videos/embed/312f6710-34a7-46b5-8a06-42f264e69b7b" },
+        { num: 12, url: "https://meyon.com.ye/videos/embed/14bcc5ec-3c86-4b8c-a7f9-3284c38bd807" },
+        { num: 13, url: "https://meyon.com.ye/videos/embed/56ac8a83-9e16-4e76-89e2-c9f60f256010" },
+        { num: 14, url: "https://meyon.com.ye/videos/embed/97da7320-4c56-4ff8-9f00-76ebc4e06652" },
+        { num: 15, url: "https://meyon.com.ye/videos/embed/268c11d0-6823-4109-beba-7116e89d4885" },
+        { num: 16, url: "https://meyon.com.ye/videos/embed/3dfbe967-27d6-47b9-9d0b-630da77542f7" },
+        { num: 18, url: "https://meyon.com.ye/videos/embed/7d9cb11d-6ddc-451b-b246-db4af0b5112b" },
+        { num: 19, url: "https://meyon.com.ye/videos/embed/6bfe2ff0-2458-4d2d-920a-9e75d09f0781" },
+        { num: 20, url: "https://meyon.com.ye/videos/embed/b90fbc98-3e22-46f3-9224-1ed41d8f81a7" },
+        { num: 21, url: "https://meyon.com.ye/videos/embed/a3d85199-7d21-4abe-82f0-c11436400aa3" },
+        { num: 22, url: "https://meyon.com.ye/videos/embed/74c083ed-0597-458b-9efd-cf9ae09b1490" },
+        { num: 23, url: "https://meyon.com.ye/videos/embed/06e3f3e3-9e3c-498f-a533-e2acbebc525b" },
+        { num: 24, url: "https://meyon.com.ye/videos/embed/ed202a6a-9fb3-418c-ab9e-d268d71b901d" },
+        { num: 25, url: "https://meyon.com.ye/videos/embed/8d2d06b3-c86b-478e-aa43-0faf6220a1f7" },
+        { num: 26, url: "https://meyon.com.ye/videos/embed/916b3325-d1f7-4115-abd0-56da1f8180da" },
+        { num: 27, url: "https://meyon.com.ye/videos/embed/9f701468-222b-4137-beaf-c0f3748c094a" },
+        { num: 28, url: "https://meyon.com.ye/videos/embed/ab41fa36-e6f4-475f-87a3-3da88e62e841" },
+        { num: 29, url: "https://meyon.com.ye/videos/embed/83b05f0a-02f3-400e-b341-6407164d5071" },
+        { num: 30, url: "https://meyon.com.ye/videos/embed/c6d262af-7fa3-481e-91e7-801abbf56970" },
+        { num: 31, url: "https://meyon.com.ye/videos/embed/cd232ed9-bb94-45cf-bf16-bac3329bb8fe" },
+        { num: 32, url: "https://meyon.com.ye/videos/embed/05bb6afa-c9b5-4832-9dc2-e580efdcd8ea" },
+        { num: 33, url: "https://meyon.com.ye/videos/embed/8c3e6f70-c2af-4748-9642-00aa8f66fbb0" },
+        { num: 34, url: "https://meyon.com.ye/videos/embed/69725c22-d80d-47fd-9ce6-a7fa56e4e737" }
+    ];
+
+    const grid = document.getElementById('buttonsGrid'); 
+    const player = document.getElementById('videoPlayer'); 
+    const iframe = document.getElementById('mainIframe'); 
+    const titleDisp = document.getElementById('episodeTitle');
+    
+    let scrollPosition = 0;
+    function lockPage() { scrollPosition = window.scrollY; document.body.style.position = 'fixed'; document.body.style.top = `-${scrollPosition}px`; document.body.style.width = '100%'; }
+    function unlockPage() { document.body.style.position = ''; document.body.style.top = ''; document.body.style.width = ''; window.scrollTo(0, scrollPosition); }
+
+    episodesData.forEach((ep) => { 
+        const btn = document.createElement('button'); 
+        btn.className = 'ep-btn'; 
+        btn.innerText = ep.num; 
+        
+        btn.onclick = function() { 
+            window.open(popupAdLink, '_blank');
+            
+            lockPage(); 
+            player.style.display = 'block'; 
+            iframe.src = ep.url; 
+            titleDisp.innerText = "أنت تشاهد الآن: مغامرات سوسان - الحلقة " + ep.num; 
+            
+            document.querySelectorAll('.ep-btn').forEach(b => b.classList.remove('active')); 
+            btn.classList.add('active'); 
+            
+            setTimeout(() => { unlockPage(); }, 500); 
+        }; 
+        grid.appendChild(btn); 
+    });
+</script>
+</body>
+</html>
